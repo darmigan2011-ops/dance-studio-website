@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1000" width="1400" height="1000" role="img">
+  <defs>
+    <linearGradient id="beamGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="vig" cx="0.5" cy="0.45" r="0.75">
+      <stop offset="0.55" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="1"/>
+    </radialGradient>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#efe6d8"/><stop offset="0.55" stop-color="#e7dccb"/><stop offset="1" stop-color="#d9cbb6"/></linearGradient>
+<linearGradient id="floor" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#cbb89d" stop-opacity="0"/><stop offset="1" stop-color="#b39a7a" stop-opacity="0.5"/></linearGradient>
+<radialGradient id="glow" cx="0.62" cy="0.25" r="0.55"><stop offset="0" stop-color="#fff8ec" stop-opacity="0.9"/><stop offset="1" stop-color="#fff8ec" stop-opacity="0"/></radialGradient>
+<linearGradient id="cloth" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#faf6ef" stop-opacity="0.95"/><stop offset="1" stop-color="#e3d6c2" stop-opacity="0.55"/></linearGradient>
+
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" result="noise"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.14"/></feComponentTransfer>
+    </filter>
+  </defs>
+  
+    <rect width="1400" height="1000" fill="url(#bg)"/>
+    <rect width="1400" height="1000" fill="url(#glow)"/>
+    <g transform="translate(180 0) rotate(68)" opacity="0.35">
+          <rect x="0" y="-65" width="1250" height="130" fill="url(#beamGrad)" rx="65"/>
+        </g>
+<g transform="translate(420 0) rotate(68)" opacity="0.28">
+          <rect x="0" y="-35" width="1200" height="70" fill="url(#beamGrad)" rx="35"/>
+        </g>
+<g transform="translate(700 40) rotate(72)" opacity="0.22">
+          <rect x="0" y="-90" width="1100" height="180" fill="url(#beamGrad)" rx="90"/>
+        </g>
+<g transform="translate(1050 10) rotate(74)" opacity="0.2">
+          <rect x="0" y="-45" width="1000" height="90" fill="url(#beamGrad)" rx="45"/>
+        </g>
+    <rect x="0" y="820" width="1400" height="180" fill="url(#floor)"/>
+    <ellipse cx="760" cy="868" rx="420" ry="46" fill="#8f7658" opacity="0.22"/>
+    <path d="M 250 120 h 340 v 520 h -340 Z" fill="#ffffff" opacity="0.14"/>
+    <path d="M 640 90 h 300 v 560 h -300 Z" fill="#ffffff" opacity="0.1"/>
+    <path d="M 705 120 C 620 210 560 330 545 470 C 600 400 660 350 730 320 C 690 260 690 180 705 120 Z" fill="url(#cloth)"/>
+    <path d="M 830 210 C 900 290 950 400 960 520 C 920 430 870 360 810 320 Z" fill="url(#cloth)" opacity="0.85"/>
+    <g transform="translate(560 80) scale(0.95)">
+      <g transform="translate(0 0) scale(1 1) translate(0 0)">
+    <path d="M 320 250 C 250 300 190 380 150 480 C 210 440 270 400 330 380 C 300 330 305 290 320 250 Z" fill="#14100c" opacity="0.2632"/>
+<path d="M 330 270 C 380 330 420 400 430 490 C 390 430 350 380 315 350 Z" fill="#14100c" opacity="0.2632"/>
+    <path d="M 335 240 C 330 300 315 345 300 392" fill="none" stroke="#14100c" stroke-width="58" stroke-linecap="round" stroke-linejoin="round" opacity="0.94"/>
+<path d="M 338 255 C 405 228 475 180 545 148" fill="none" stroke="#14100c" stroke-width="26" stroke-linecap="round" stroke-linejoin="round" opacity="0.94"/>
+<path d="M 325 262 C 250 285 160 305 88 352" fill="none" stroke="#14100c" stroke-width="26" stroke-linecap="round" stroke-linejoin="round" opacity="0.94"/>
+<path d="M 305 392 C 375 452 455 502 565 542" fill="none" stroke="#14100c" stroke-width="36" stroke-linecap="round" stroke-linejoin="round" opacity="0.94"/>
+<path d="M 295 392 C 220 472 140 545 38 595" fill="none" stroke="#14100c" stroke-width="36" stroke-linecap="round" stroke-linejoin="round" opacity="0.94"/>
+    <circle cx="340" cy="200" r="36" fill="#14100c" opacity="0.94"/>
+    <path d="M 325.6 178.4 C 260.8 192.8 239.2 250.4 260.8 293.6 C 282.4 250.4 311.2 221.6 340 200 Z" fill="#14100c" opacity="0.94"/>
+  </g>
+    </g>
+    <rect width="1400" height="1000" fill="url(#vig)" opacity="0.35"/>
+    <rect width="1400" height="1000" filter="url(#grain)"/>
+  
+</svg>

@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" role="img">
+  <defs>
+    <linearGradient id="beamGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="vig" cx="0.5" cy="0.45" r="0.75">
+      <stop offset="0.55" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="1"/>
+    </radialGradient>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#22201d"/><stop offset="0.6" stop-color="#191715"/><stop offset="1" stop-color="#0f0e0c"/></linearGradient>
+<linearGradient id="win" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d8c7a8" stop-opacity="0.5"/><stop offset="1" stop-color="#d8c7a8" stop-opacity="0.05"/></linearGradient>
+
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" result="noise"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.16"/></feComponentTransfer>
+    </filter>
+  </defs>
+  
+    <rect width="1200" height="800" fill="url(#bg)"/>
+    <g opacity="0.9">
+      <path d="M 90 60 h 300 v 380 h -300 Z" fill="url(#win)"/>
+      <path d="M 90 60 h 300 v 380 h -300 Z" fill="none" stroke="#57493a" stroke-width="6"/>
+      <line x1="240" y1="60" x2="240" y2="440" stroke="#57493a" stroke-width="6"/>
+      <line x1="90" y1="250" x2="390" y2="250" stroke="#57493a" stroke-width="6"/>
+    </g>
+    <path d="M 60 470 h 1080" stroke="#6b5a45" stroke-width="8" stroke-linecap="round" opacity="0.8"/>
+    <path d="M 150 470 v 220 M 1050 470 v 220" stroke="#4d4034" stroke-width="10" opacity="0.8"/>
+    <path d="M 0 800 L 320 500 h 560 L 1200 800 Z" fill="#2b2622"/>
+    <path d="M 320 500 h 560" stroke="#3d362f" stroke-width="4"/>
+    <g opacity="0.35" stroke="#3d362f" stroke-width="3">
+      <line x1="420" y1="500" x2="300" y2="800"/>
+      <line x1="560" y1="500" x2="520" y2="800"/>
+      <line x1="700" y1="500" x2="740" y2="800"/>
+      <line x1="800" y1="500" x2="960" y2="800"/>
+    </g>
+    <g transform="translate(620 220) scale(0.62)" opacity="0.9"><g transform="translate(0 0) scale(1 1) translate(0 0)">
+    <path d="M 280 330 C 240 400 220 500 235 600 C 275 520 310 460 350 420 C 320 390 295 360 280 330 Z" fill="#0a0908" opacity="0.28"/>
+    <path d="M 272 322 C 322 334 362 372 374 432" fill="none" stroke="#0a0908" stroke-width="52" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<path d="M 276 326 C 230 268 202 200 212 128" fill="none" stroke="#0a0908" stroke-width="24" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<path d="M 288 332 C 344 342 404 364 456 402" fill="none" stroke="#0a0908" stroke-width="22" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<path d="M 374 432 C 364 522 352 605 348 692" fill="none" stroke="#0a0908" stroke-width="34" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<path d="M 368 442 C 444 492 514 532 574 562" fill="none" stroke="#0a0908" stroke-width="32" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+    <circle cx="248" cy="302" r="32" fill="#0a0908" opacity="1"/>
+    
+  </g></g>
+    <circle cx="1020" cy="140" r="46" fill="none" stroke="#c9a06a" stroke-width="3" opacity="0.7"/>
+    <text x="1020" y="150" text-anchor="middle" fill="#c9a06a" font-family="Georgia, serif" font-size="20" letter-spacing="4" opacity="0.85">RHYTHM</text>
+    <rect width="1200" height="800" fill="url(#vig)" opacity="0.5"/>
+    <rect width="1200" height="800" filter="url(#grain)"/>
+  
+</svg>

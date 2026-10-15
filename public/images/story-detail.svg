@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1200" width="1000" height="1200" role="img">
+  <defs>
+    <linearGradient id="beamGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="vig" cx="0.5" cy="0.45" r="0.75">
+      <stop offset="0.55" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="1"/>
+    </radialGradient>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c9b494"/><stop offset="0.5" stop-color="#a98f6d"/><stop offset="1" stop-color="#6d5843"/></linearGradient>
+<radialGradient id="glow" cx="0.5" cy="0.35" r="0.7"><stop offset="0" stop-color="#fff1da" stop-opacity="0.7"/><stop offset="1" stop-color="#fff1da" stop-opacity="0"/></radialGradient>
+
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" result="noise"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.16"/></feComponentTransfer>
+    </filter>
+  </defs>
+  
+    <rect width="1000" height="1200" fill="url(#bg)"/>
+    <rect width="1000" height="1200" fill="url(#glow)"/>
+    <g transform="translate(120 -60) rotate(72)" opacity="0.22">
+          <rect x="0" y="-75" width="1300" height="150" fill="url(#beamGrad)" rx="75"/>
+        </g>
+<g transform="translate(520 -80) rotate(80)" opacity="0.18">
+          <rect x="0" y="-50" width="1300" height="100" fill="url(#beamGrad)" rx="50"/>
+        </g>
+    <rect x="0" y="900" width="1000" height="300" fill="#000" opacity="0.25"/>
+    <g transform="translate(190 160) scale(0.95 0.95) translate(0 0)">
+    <path d="M 280 330 C 240 400 220 500 235 600 C 275 520 310 460 350 420 C 320 390 295 360 280 330 Z" fill="#0d0b09" opacity="0.28"/>
+    <path d="M 272 322 C 322 334 362 372 374 432" fill="none" stroke="#0d0b09" stroke-width="52" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<path d="M 276 326 C 230 268 202 200 212 128" fill="none" stroke="#0d0b09" stroke-width="24" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<path d="M 288 332 C 344 342 404 364 456 402" fill="none" stroke="#0d0b09" stroke-width="22" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<path d="M 374 432 C 364 522 352 605 348 692" fill="none" stroke="#0d0b09" stroke-width="34" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<path d="M 368 442 C 444 492 514 532 574 562" fill="none" stroke="#0d0b09" stroke-width="32" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+    <circle cx="248" cy="302" r="32" fill="#0d0b09" opacity="1"/>
+    
+  </g>
+    <rect width="1000" height="1200" fill="url(#vig)" opacity="0.45"/>
+    <rect width="1000" height="1200" filter="url(#grain)"/>
+  
+</svg>

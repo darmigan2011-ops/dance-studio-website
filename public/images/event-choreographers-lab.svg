@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="900" height="600" role="img">
+  <defs>
+    <linearGradient id="beamGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="vig" cx="0.5" cy="0.45" r="0.75">
+      <stop offset="0.55" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="1"/>
+    </radialGradient>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#13382c"/><stop offset="0.45" stop-color="#0a1f18"/><stop offset="1" stop-color="#040d0a"/></linearGradient>
+<radialGradient id="glow" cx="0.5" cy="0.28" r="0.7"><stop offset="0" stop-color="#4fd49a" stop-opacity="0.9"/><stop offset="1" stop-color="#4fd49a" stop-opacity="0"/></radialGradient>
+
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" result="noise"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.2"/></feComponentTransfer>
+    </filter>
+  </defs>
+  
+    <rect width="900" height="600" fill="url(#bg)"/>
+    <rect width="900" height="600" fill="url(#glow)"/>
+    <g transform="translate(120 -30) rotate(78)" opacity="0.3">
+          <rect x="0" y="-60" width="640" height="120" fill="url(#beamGrad)" rx="60"/>
+        </g>
+<g transform="translate(380 -40) rotate(86)" opacity="0.26">
+          <rect x="0" y="-40" width="680" height="80" fill="url(#beamGrad)" rx="40"/>
+        </g>
+<g transform="translate(620 -20) rotate(96)" opacity="0.24">
+          <rect x="0" y="-70" width="640" height="140" fill="url(#beamGrad)" rx="70"/>
+        </g>
+    <ellipse cx="450" cy="520" rx="380" ry="50" fill="#000" opacity="0.35"/>
+    <g transform="translate(190 100) scale(0.58 0.58) translate(0 0)">
+    <path d="M 320 250 C 250 300 190 380 150 480 C 210 440 270 400 330 380 C 300 330 305 290 320 250 Z" fill="#0d0b09" opacity="0.28"/>
+<path d="M 330 270 C 380 330 420 400 430 490 C 390 430 350 380 315 350 Z" fill="#0d0b09" opacity="0.28"/>
+    <path d="M 335 240 C 330 300 315 345 300 392" fill="none" stroke="#0d0b09" stroke-width="58" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<path d="M 338 255 C 405 228 475 180 545 148" fill="none" stroke="#0d0b09" stroke-width="26" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<path d="M 325 262 C 250 285 160 305 88 352" fill="none" stroke="#0d0b09" stroke-width="26" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<path d="M 305 392 C 375 452 455 502 565 542" fill="none" stroke="#0d0b09" stroke-width="36" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<path d="M 295 392 C 220 472 140 545 38 595" fill="none" stroke="#0d0b09" stroke-width="36" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+    <circle cx="340" cy="200" r="36" fill="#0d0b09" opacity="1"/>
+    <path d="M 325.6 178.4 C 260.8 192.8 239.2 250.4 260.8 293.6 C 282.4 250.4 311.2 221.6 340 200 Z" fill="#0d0b09" opacity="1"/>
+  </g>
+<g transform="translate(500 120) scale(-0.52 0.52) translate(-600 0)">
+    
+    <path d="M 320 256 C 336 316 352 362 356 402" fill="none" stroke="#0d0b09" stroke-width="52" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<path d="M 316 276 C 280 302 274 342 300 372" fill="none" stroke="#0d0b09" stroke-width="22" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<path d="M 332 270 C 372 242 392 192 382 142" fill="none" stroke="#0d0b09" stroke-width="22" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<path d="M 356 402 C 350 492 346 572 342 652" fill="none" stroke="#0d0b09" stroke-width="32" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<path d="M 346 406 C 312 472 302 542 312 642" fill="none" stroke="#0d0b09" stroke-width="30" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+    <circle cx="320" cy="222" r="32" fill="#0d0b09" opacity="1"/>
+    
+  </g>
+    <path d="M 0 600 C 60 540 120 560 160 600 Z M 140 600 C 200 520 280 530 330 600 Z M 300 600 C 360 545 430 550 480 600 Z M 450 600 C 520 515 610 530 660 600 Z M 620 600 C 680 540 760 545 810 600 Z M 780 600 C 830 555 870 560 900 600 Z" fill="#080605" opacity="0.85"/>
+    <rect width="900" height="600" fill="url(#vig)" opacity="0.5"/>
+    <rect width="900" height="600" filter="url(#grain)"/>
+  
+</svg>
