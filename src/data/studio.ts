@@ -1,3 +1,5 @@
+import { img } from '../lib/assets';
+
 export interface Instructor {
   name: string;
   role: string;
@@ -45,28 +47,28 @@ export const studio = {
     {
       name: 'Isha',
       role: 'Contemporary & Jazz Faculty',
-      image: '/images/dancer-isha.jpg',
+      image: img('images/dancer-isha.jpg'),
       bio: 'Twelve years of stage and teaching experience. Leads the annual ensemble piece and the contemporary track.',
       dancerSlug: 'isha',
     },
     {
       name: 'Kavin',
       role: 'Hip Hop Instructor & Choreographer',
-      image: '/images/dancer-kavin.jpg',
+      image: img('images/dancer-kavin.jpg'),
       bio: 'Commercial choreographer for stage and screen. Runs the intermediate and advanced hip hop tracks.',
       dancerSlug: 'kavin',
     },
     {
       name: 'Meera',
       role: 'Ballet Faculty',
-      image: '/images/dancer-meera.jpg',
+      image: img('images/dancer-meera.jpg'),
       bio: 'Conservatory-trained, professionally performed, injury-aware. Builds the foundation every other style stands on.',
       dancerSlug: 'meera',
     },
     {
       name: 'Diya',
       role: 'Bollywood Fusion Choreographer',
-      image: '/images/dancer-diya.jpg',
+      image: img('images/dancer-diya.jpg'),
       bio: 'Narrative choreography across filmography and classical Indian lines. Directs festival sets and the Diwali showcase.',
       dancerSlug: 'diya',
     },

@@ -7,6 +7,7 @@ import { classes } from '../data/classes';
 import { dancers } from '../data/dancers';
 import { events } from '../data/events';
 import { usePageTitle } from '../components/utils';
+import { img } from '../lib/assets';
 import './Home.css';
 
 const quickLinks = [
@@ -101,7 +102,7 @@ export function HomePage() {
           </div>
 
           <Reveal className="hero-visual" zoom delay={120}>
-            <img src="/images/hero-dancer-leap.jpg" alt="Dancer leaping through shafts of stage light and haze" />
+            <img src={img('images/hero-dancer-leap.jpg')} alt="Dancer leaping through shafts of stage light and haze" />
           </Reveal>
 
           <p className="hero-script" aria-hidden="true">
@@ -146,7 +147,7 @@ export function HomePage() {
       <section className="styles-section" id="styles">
         <div className="styles-split">
           <Reveal className="styles-visual" zoom>
-            <img src="/images/styles-spotlight.jpg" alt="Hip hop dancer moving through a single spotlight in a dark studio" />
+            <img src={img('images/styles-spotlight.jpg')} alt="Hip hop dancer moving through a single spotlight in a dark studio" />
             <p className="styles-visual-eyebrow">
               Different styles
               <br />
@@ -255,7 +256,7 @@ export function HomePage() {
       <section className="home-story">
         <div className="home-story-media">
           <Reveal className="home-story-img home-story-img--main" zoom>
-            <img src="/images/studio-community.jpg" alt="Four dancers laughing and moving together in a sunlit studio" loading="lazy" />
+            <img src={img('images/studio-community.jpg')} alt="Four dancers laughing and moving together in a sunlit studio" loading="lazy" />
             <span className="home-story-orb" aria-hidden="true">
               Move
               <br />
@@ -282,7 +283,7 @@ export function HomePage() {
           </Reveal>
         </div>
         <Reveal className="home-story-img home-story-img--side" zoom>
-          <img src="/images/studio-interior.jpg" alt="The Rhythm studio interior with mirrors, barre and window light" loading="lazy" />
+          <img src={img('images/studio-interior.jpg')} alt="The Rhythm studio interior with mirrors, barre and window light" loading="lazy" />
         </Reveal>
       </section>
 

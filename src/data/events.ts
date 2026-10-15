@@ -1,3 +1,5 @@
+import { img } from '../lib/assets';
+
 export type EventCategory = 'Performance' | 'Workshop' | 'Competition' | 'Community';
 
 export interface EventAgendaItem {
@@ -32,7 +34,7 @@ export const events: DanceEvent[] = [
     endTime: '10:00 PM',
     venue: 'Hosur Cultural Hall',
     category: 'Performance',
-    image: '/images/event-urban-beats.jpg',
+    image: img('images/event-urban-beats.jpg'),
     excerpt: 'An evening of hip hop choreography, cyphers and guest crews under one roof.',
     description: [
       'Urban Beats Night is the studio’s flagship hip hop showcase — new choreography from every faculty member, open cyphers between sets, and guest crews from across the city.',
@@ -59,7 +61,7 @@ export const events: DanceEvent[] = [
     endTime: '9:30 PM',
     venue: 'Chennai Art Centre',
     category: 'Performance',
-    image: '/images/event-fusion-showcase.jpg',
+    image: img('images/event-fusion-showcase.jpg'),
     excerpt: 'Contemporary, jazz and Bollywood fusion pieces performed by studio ensembles.',
     description: [
       'One night, three vocabularies. The Fusion Showcase pairs contemporary ensembles with jazz and Bollywood fusion sets, closing with a combined company piece choreographed by Isha and Diya.',
@@ -85,7 +87,7 @@ export const events: DanceEvent[] = [
     endTime: '7:00 PM',
     venue: 'Studio Main Hall',
     category: 'Community',
-    image: '/images/event-kids-day.jpg',
+    image: img('images/event-kids-day.jpg'),
     excerpt: 'Our youngest dancers take the floor in front of family and friends.',
     description: [
       'A celebration rather than an exam — every child performs a piece they have built over the term, with live encouragement from the whole studio community.',
@@ -111,7 +113,7 @@ export const events: DanceEvent[] = [
     endTime: '9:00 PM',
     venue: 'Studio Black Box',
     category: 'Workshop',
-    image: '/images/event-choreographers-lab.jpg',
+    image: img('images/event-choreographers-lab.jpg'),
     excerpt: 'A working session for dancers creating their own material.',
     description: [
       'Bring an eight-count, a concept, or an empty notebook. Faculty rotate through small groups offering feedback on structure, musicality and staging.',
@@ -136,7 +138,7 @@ export const events: DanceEvent[] = [
     endTime: '4:00 PM',
     venue: 'Studio Main Hall & Studio 2',
     category: 'Workshop',
-    image: '/images/event-winter-intensive.jpg',
+    image: img('images/event-winter-intensive.jpg'),
     excerpt: 'A full day of technique, conditioning and repertoire across styles.',
     description: [
       'One day, six sessions. Ballet barre with Meera, contemporary floorwork with Isha, hip hop foundations with Kavin, plus conditioning and a repertoire block building toward the anniversary gala.',
@@ -163,7 +165,7 @@ export const events: DanceEvent[] = [
     endTime: '11:00 PM',
     venue: 'Hosur Cultural Hall',
     category: 'Performance',
-    image: '/images/event-anniversary-gala.jpg',
+    image: img('images/event-anniversary-gala.jpg'),
     excerpt: 'Ten years of Rhythm — an evening of premieres, alumni and celebration.',
     description: [
       'The gala marks a decade of the studio with world-premiere pieces from current faculty, reunions with alumni now dancing professionally, and a closing number that involves every level in the building.',

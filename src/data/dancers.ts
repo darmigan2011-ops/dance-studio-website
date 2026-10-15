@@ -1,3 +1,5 @@
+import { img } from '../lib/assets';
+
 export interface Dancer {
   slug: string;
   name: string;
@@ -19,7 +21,7 @@ export const dancers: Dancer[] = [
     name: 'Aarohi',
     role: 'Freestyle Cypher Lead',
     styles: ['Freestyle', 'Hip Hop'],
-    image: '/images/dancer-aarohi.jpg',
+    image: img('images/dancer-aarohi.jpg'),
     tagline: 'Hip Hop · Freestyle',
     bio: [
       'Aarohi came to hip hop through late-night cyphers and never really left. Her classes balance foundational grooves with the confidence to improvise in front of anyone.',
@@ -36,7 +38,7 @@ export const dancers: Dancer[] = [
     name: 'Kavin',
     role: 'Hip Hop Instructor & Choreographer',
     styles: ['Urban', 'Choreography'],
-    image: '/images/dancer-kavin.jpg',
+    image: img('images/dancer-kavin.jpg'),
     tagline: 'Urban · Choreography',
     bio: [
       'Kavin builds clean, hard-hitting choreography for stage and screen. His classes are known for meticulous counts, sharp texture changes and an insistence that every dancer understands the why behind each hit.',
@@ -53,7 +55,7 @@ export const dancers: Dancer[] = [
     name: 'Isha',
     role: 'Contemporary & Jazz Faculty',
     styles: ['Contemporary', 'Jazz'],
-    image: '/images/dancer-isha.jpg',
+    image: img('images/dancer-isha.jpg'),
     tagline: 'Contemporary · Jazz',
     bio: [
       'Trained in both release contemporary and theatre jazz, Isha’s teaching joins technique to storytelling. Expect floorwork, breath-led phrasing and choreography that asks something honest of every dancer.',
@@ -70,7 +72,7 @@ export const dancers: Dancer[] = [
     name: 'Rithik',
     role: 'Breaking & Hip Hop',
     styles: ['Hip Hop', 'Breaking'],
-    image: '/images/dancer-rithik.jpg',
+    image: img('images/dancer-rithik.jpg'),
     tagline: 'Hip Hop · Breaking',
     bio: [
       'Rithik started breaking in a college stairwell and progressed to regional battle finals. He teaches progression with patience — toprock and footwork first, power moves only when the body is ready.',
@@ -87,7 +89,7 @@ export const dancers: Dancer[] = [
     name: 'Diya',
     role: 'Bollywood Fusion Choreographer',
     styles: ['Bollywood', 'Fusion'],
-    image: '/images/dancer-diya.jpg',
+    image: img('images/dancer-diya.jpg'),
     tagline: 'Bollywood · Fusion',
     bio: [
       'Diya blends filmography with classical Indian lines and contemporary texture. Her pieces are narrative, high-energy and built for ensembles of every experience level.',
@@ -104,7 +106,7 @@ export const dancers: Dancer[] = [
     name: 'Arjun',
     role: 'Heels & Movement Coach',
     styles: ['Urban', 'Heels'],
-    image: '/images/dancer-arjun.jpg',
+    image: img('images/dancer-arjun.jpg'),
     tagline: 'Urban · Heels',
     bio: [
       'Arjun’s classes treat heels as technique, not costume — posture, weight placement and controlled transitions. Dancers leave standing taller in every shoe they own.',
@@ -121,7 +123,7 @@ export const dancers: Dancer[] = [
     name: 'Meera',
     role: 'Ballet Faculty',
     styles: ['Ballet', 'Contemporary'],
-    image: '/images/dancer-meera.jpg',
+    image: img('images/dancer-meera.jpg'),
     tagline: 'Ballet · Contemporary',
     bio: [
       'Meera brings conservatory-level ballet training into a warm, ego-free studio. Her barre work is precise; her corrections are kind; her students become the strongest movers in the building.',
@@ -138,7 +140,7 @@ export const dancers: Dancer[] = [
     name: 'Sana',
     role: 'Jazz & Kids Programme',
     styles: ['Jazz', 'Bollywood'],
-    image: '/images/dancer-sana.jpg',
+    image: img('images/dancer-sana.jpg'),
     tagline: 'Jazz · Kids Programme',
     bio: [
       'Sana leads the children’s and teen programmes, where technique is disguised as play and every recital ends with the whole room on its feet.',

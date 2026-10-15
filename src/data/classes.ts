@@ -1,3 +1,5 @@
+import { img } from '../lib/assets';
+
 export type Level = 'Beginner' | 'Intermediate' | 'Advanced' | 'All Levels';
 
 export interface ClassSlot {
@@ -26,7 +28,7 @@ export const classes: DanceClass[] = [
     tagline: 'Groove, power and personal flavour',
     description:
       'Foundational bounces, isolations and freestyle battles. Classes build musicality, stage presence and a vocabulary of grooves you can take to any cypher.',
-    image: '/images/style-hiphop.jpg',
+    image: img('images/style-hiphop.jpg'),
     accent: '#5b9fd4',
     levels: ['Beginner', 'Intermediate', 'Advanced'],
     schedule: [
@@ -42,7 +44,7 @@ export const classes: DanceClass[] = [
     tagline: 'Flow, floorwork and honest expression',
     description:
       'Release technique, spirals and breath-led phrasing. Dancers learn to move efficiently through the floor and build emotionally resonant improvisation.',
-    image: '/images/style-contemporary.jpg',
+    image: img('images/style-contemporary.jpg'),
     accent: '#e0a35c',
     levels: ['Beginner', 'Intermediate', 'Advanced'],
     schedule: [
@@ -58,7 +60,7 @@ export const classes: DanceClass[] = [
     tagline: 'Sharp lines, performance sparkle',
     description:
       'From classic jazz to theatre commercial style — turns, leaps, formations and the confident performance quality every stage demands.',
-    image: '/images/style-jazz.jpg',
+    image: img('images/style-jazz.jpg'),
     accent: '#e2564a',
     levels: ['Beginner', 'Intermediate', 'Advanced'],
     schedule: [
@@ -73,7 +75,7 @@ export const classes: DanceClass[] = [
     tagline: 'The architecture behind every dancer',
     description:
       'Barre, centre and alignment work that builds the strength, turnout and control supporting every other style in the studio.',
-    image: '/images/style-ballet.jpg',
+    image: img('images/style-ballet.jpg'),
     accent: '#a08a70',
     levels: ['Beginner', 'Intermediate', 'Advanced'],
     schedule: [
@@ -89,7 +91,7 @@ export const classes: DanceClass[] = [
     tagline: 'Storytelling, rhythm and joy',
     description:
       'Filmography, classical Indian foundations and contemporary texture blended into high-energy choreography built for the stage.',
-    image: '/images/style-bollywood.jpg',
+    image: img('images/style-bollywood.jpg'),
     accent: '#d4568f',
     levels: ['All Levels', 'Intermediate'],
     schedule: [
@@ -104,7 +106,7 @@ export const classes: DanceClass[] = [
     tagline: 'Poise, precision and power',
     description:
       'Technique in heels with an emphasis on posture, controlled weight placement and commanding performance quality.',
-    image: '/images/style-heels.jpg',
+    image: img('images/style-heels.jpg'),
     accent: '#ef6a52',
     levels: ['Beginner', 'Intermediate'],
     schedule: [
@@ -119,7 +121,7 @@ export const classes: DanceClass[] = [
     tagline: 'Find your own movement language',
     description:
       'Guided improvisation, musicality drills and cipher practice. The class where dancers stop copying and start speaking through movement.',
-    image: '/images/style-freestyle.jpg',
+    image: img('images/style-freestyle.jpg'),
     accent: '#6cbf8a',
     levels: ['All Levels'],
     schedule: [
@@ -133,7 +135,7 @@ export const classes: DanceClass[] = [
     tagline: 'Power moves, toprock and battles',
     description:
       'Toprock, footwork, freezes and progressive power moves in a supportive battle culture with regular studio cyphers.',
-    image: '/images/style-breaking.jpg',
+    image: img('images/style-breaking.jpg'),
     accent: '#8fa8c8',
     levels: ['Beginner', 'Advanced'],
     schedule: [

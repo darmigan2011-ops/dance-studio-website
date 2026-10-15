@@ -3,6 +3,7 @@ import { Reveal } from '../components/Reveal';
 import { ArrowRight } from '../components/icons';
 import { studio } from '../data/studio';
 import { usePageTitle } from '../components/utils';
+import { img } from '../lib/assets';
 import '../styles/pages.css';
 
 export function AboutPage() {
@@ -28,7 +29,7 @@ export function AboutPage() {
       <section className="about-story">
         <div className="container about-story-grid">
           <Reveal className="about-story-media" zoom>
-            <img src="/images/about-rehearsal.jpg" alt="Dancers rehearsing together in warm stage light" />
+            <img src={img('images/about-rehearsal.jpg')} alt="Dancers rehearsing together in warm stage light" />
           </Reveal>
           <Reveal delay={120} className="about-story-copy">
             <p className="eyebrow">Since 2016</p>
