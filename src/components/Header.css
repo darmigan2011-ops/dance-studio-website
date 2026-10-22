@@ -5,6 +5,9 @@
   height: var(--header-h);
   display: flex;
   align-items: center;
+  background: rgba(246, 241, 231, 0.92);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 1px 0 var(--line-soft);
   transition:
     background-color var(--t-med) var(--ease-soft),
     box-shadow var(--t-med) var(--ease-soft),
@@ -12,9 +15,8 @@
 }
 
 .site-header.is-scrolled {
-  background: rgba(246, 241, 231, 0.88);
-  backdrop-filter: blur(14px);
-  box-shadow: 0 1px 0 var(--line-soft);
+  background: rgba(246, 241, 231, 0.96);
+  box-shadow: 0 8px 30px -18px rgba(13, 33, 55, 0.35);
 }
 
 .header-inner {
@@ -89,7 +91,7 @@
 }
 
 .nav-link:hover {
-  color: var(--terracotta);
+  color: var(--accent);
 }
 
 .nav-link:hover::after,
@@ -181,11 +183,19 @@
 }
 
 .mobile-link.is-active {
-  color: var(--terracotta);
+  color: var(--accent);
 }
 
 .mobile-join {
   margin-top: 1rem;
+}
+
+.mobile-instagram {
+  margin-top: 0.6rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
 }
 
 @media (max-width: 920px) {

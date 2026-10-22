@@ -1,6 +1,14 @@
 import { img } from '../lib/assets';
 
-export type EventCategory = 'Performance' | 'Workshop' | 'Competition' | 'Community';
+export type EventCategory = 'Jam Session' | 'Performance' | 'Workshop' | 'Community';
+
+export interface EventPerformer {
+  name: string;
+  role: string;
+  instagram?: string;
+  instagramUrl?: string;
+  bio?: string;
+}
 
 export interface EventAgendaItem {
   time: string;
@@ -10,189 +18,101 @@ export interface EventAgendaItem {
 export interface DanceEvent {
   slug: string;
   title: string;
-  date: string; // ISO yyyy-mm-dd
+  date: string;
   startTime: string;
   endTime: string;
   venue: string;
+  venueNote?: string;
+  address: string;
+  city: string;
   category: EventCategory;
   image: string;
   excerpt: string;
   description: string[];
-  agenda: EventAgendaItem[];
+  agenda?: EventAgendaItem[];
   admission: string;
-  registrationNote: string;
-  performers: string[];
+  paymentNote?: string;
+  registrationUrl?: string;
+  registrationNote?: string;
+  performers: EventPerformer[];
   featured: boolean;
 }
 
 export const events: DanceEvent[] = [
   {
-    slug: 'urban-beats-night',
-    title: 'Urban Beats Night',
-    date: '2026-10-18',
-    startTime: '7:00 PM',
-    endTime: '10:00 PM',
-    venue: 'Hosur Cultural Hall',
-    category: 'Performance',
-    image: img('images/event-urban-beats.jpg'),
-    excerpt: 'An evening of hip hop choreography, cyphers and guest crews under one roof.',
+    slug: 'south-asian-jam',
+    title: 'South Asian Jam',
+    date: '2026-10-17',
+    startTime: '5:00 PM',
+    endTime: '8:00 PM',
+    venue: 'Decentered Arts',
+    venueNote: 'Studio is up a flight of stairs.',
+    address: '1175 Folsom St',
+    city: 'San Francisco, CA 94103',
+    category: 'Jam Session',
+    image: img('images/sanada/south-asian-jam-poster.jpg'),
+    excerpt: 'An evening of Indian classical music and dance with Sanāda Space and Decentered Arts.',
     description: [
-      'Urban Beats Night is the studio’s flagship hip hop showcase — new choreography from every faculty member, open cyphers between sets, and guest crews from across the city.',
-      'Doors open at 6:30 PM. The first half is student work; the second half belongs to the freestyle floor. Bring friends, bring energy.',
+      'Come experience a South Asian Jam session from Sanāda Space — an artistic initiative started by two Indian classical dancers, Priyadharshini Govindarajan (@priyagovind.art) and Anulekha Chillal (@thedevithedancer), in collaboration with Decentered Arts.',
+      'This South Asian Jam features an evening of Indian classical music and dance, with snacks and chai provided. 100% of funds support the performing artists and Decentered Arts, the nonprofit venue, so more evenings like this can happen in the future.',
     ],
-    agenda: [
-      { time: '6:30 PM', item: 'Doors open · lobby gallery' },
-      { time: '7:00 PM', item: 'Student showcase — first half' },
-      { time: '8:00 PM', item: 'Guest crew performances' },
-      { time: '8:45 PM', item: 'Open cypher — all levels welcome' },
-      { time: '9:45 PM', item: 'Awards & close' },
+    agenda: [],
+    admission: '$15 general · $10 Decentered Arts members',
+    paymentNote: 'Pay through Venmo @AnuChillal or PayPal (Anulekha Chillal).',
+    registrationUrl: 'https://partiful.com/e/bIBtifNoGGLKrRite1nL?c=t0FeW8wp',
+    registrationNote: 'RSVP and ticket info on Partiful. Tickets are $15, and $10 for Decentered Arts members.',
+    performers: [
+      {
+        name: 'Swati Jhaveri',
+        role: 'Hindustani vocals',
+        instagram: '@swati.jhaveri1128',
+        instagramUrl: 'https://www.instagram.com/swati.jhaveri1128/',
+        bio: 'A melodious singer taking us through evening-themed ragas and songs — both soothing and joyous — accompanied by Tushar Gupte (tabla) and Satyam Bagwe (harmonium and vocals).',
+      },
+      {
+        name: 'Tushar Gupte',
+        role: 'Tabla (North Indian drums)',
+        instagram: '@tushar_gupte',
+        instagramUrl: 'https://www.instagram.com/tushar_gupte/',
+        bio: 'Accomplished tabla player, joining the drum duo / jugalbandi with Shiva Iyer on mridangam.',
+      },
+      {
+        name: 'Shiva Iyer',
+        role: 'Mridangam (South Indian drums)',
+        instagram: '@shivariyer',
+        instagramUrl: 'https://www.instagram.com/shivariyer/',
+        bio: 'Accomplished mridangam player. Come witness beats in action in a North–South drum jugalbandi.',
+      },
+      {
+        name: 'Satyam Bagwe',
+        role: 'Harmonium & vocals',
+        instagram: '@satyambagwe',
+        instagramUrl: 'https://www.instagram.com/satyambagwe/',
+        bio: 'Talented harmonium player and vocalist accompanying Swati Jhaveri.',
+      },
+      {
+        name: 'Anulekha Chillal',
+        role: 'Kuchipudi dance',
+        instagram: '@thedevithedancer',
+        instagramUrl: 'https://www.instagram.com/thedevithedancer/',
+        bio: 'A staple Kuchipudi item, then a plate-dance finale — musically accompanied by Priyadharshini (nattuvangam) and Shiva (mridangam).',
+      },
+      {
+        name: 'Priyadharshini Govindarajan',
+        role: 'Nattuvangam (cymbals) · Bharatanatyam',
+        instagram: '@priyagovind.art',
+        instagramUrl: 'https://www.instagram.com/priyagovind.art/',
+        bio: 'Providing nattuvangam (percussion through cymbals) for Anulekha’s Kuchipudi set.',
+      },
     ],
-    admission: '₹400 general · ₹250 students · free for members',
-    registrationNote:
-      'Reserve your seat by sending an enquiry — we hold seats for 48 hours after confirmation.',
-    performers: ['kavin', 'aarohi', 'rithik', 'arjun'],
     featured: true,
-  },
-  {
-    slug: 'fusion-dance-showcase',
-    title: 'Fusion Dance Showcase',
-    date: '2026-10-25',
-    startTime: '6:30 PM',
-    endTime: '9:30 PM',
-    venue: 'Chennai Art Centre',
-    category: 'Performance',
-    image: img('images/event-fusion-showcase.jpg'),
-    excerpt: 'Contemporary, jazz and Bollywood fusion pieces performed by studio ensembles.',
-    description: [
-      'One night, three vocabularies. The Fusion Showcase pairs contemporary ensembles with jazz and Bollywood fusion sets, closing with a combined company piece choreographed by Isha and Diya.',
-      'The Art Centre’s black box is an intimate room — every seat is a good one.',
-    ],
-    agenda: [
-      { time: '6:00 PM', item: 'Doors open' },
-      { time: '6:30 PM', item: 'Contemporary ensemble sets' },
-      { time: '7:30 PM', item: 'Jazz & Bollywood fusion' },
-      { time: '8:30 PM', item: 'Combined company piece' },
-      { time: '9:00 PM', item: 'Reception with the artists' },
-    ],
-    admission: '₹500 general · free for members',
-    registrationNote: 'Seating is limited to 180 guests. Enquire to reserve.',
-    performers: ['isha', 'diya', 'meera', 'sana'],
-    featured: true,
-  },
-  {
-    slug: 'kids-performance-day',
-    title: 'Kids Performance Day',
-    date: '2026-11-02',
-    startTime: '4:00 PM',
-    endTime: '7:00 PM',
-    venue: 'Studio Main Hall',
-    category: 'Community',
-    image: img('images/event-kids-day.jpg'),
-    excerpt: 'Our youngest dancers take the floor in front of family and friends.',
-    description: [
-      'A celebration rather than an exam — every child performs a piece they have built over the term, with live encouragement from the whole studio community.',
-      'Photography is welcome. A shared potluck follows in the lobby.',
-    ],
-    agenda: [
-      { time: '3:30 PM', item: 'Backstage warm-up' },
-      { time: '4:00 PM', item: 'Minis showcase (ages 5–8)' },
-      { time: '5:00 PM', item: 'Juniors showcase (ages 9–13)' },
-      { time: '6:00 PM', item: 'Awards & certificates' },
-      { time: '6:30 PM', item: 'Community potluck' },
-    ],
-    admission: 'Free for participating families · ₹100 guests',
-    registrationNote: 'Participating families confirm through their class instructor.',
-    performers: ['sana', 'diya'],
-    featured: true,
-  },
-  {
-    slug: 'choreographers-lab',
-    title: 'Choreographers’ Lab',
-    date: '2026-11-21',
-    startTime: '6:00 PM',
-    endTime: '9:00 PM',
-    venue: 'Studio Black Box',
-    category: 'Workshop',
-    image: img('images/event-choreographers-lab.jpg'),
-    excerpt: 'A working session for dancers creating their own material.',
-    description: [
-      'Bring an eight-count, a concept, or an empty notebook. Faculty rotate through small groups offering feedback on structure, musicality and staging.',
-      'The lab closes with an informal showing — no judgement, just work in progress.',
-    ],
-    agenda: [
-      { time: '6:00 PM', item: 'Warm-up & intention setting' },
-      { time: '6:30 PM', item: 'Rotating mentor feedback' },
-      { time: '8:00 PM', item: 'Open creation time' },
-      { time: '8:45 PM', item: 'Informal showing' },
-    ],
-    admission: '₹350 per dancer · free for advanced-track members',
-    registrationNote: 'Places capped at 20. Enquire to hold a spot.',
-    performers: ['kavin', 'isha', 'aarohi'],
-    featured: false,
-  },
-  {
-    slug: 'winter-dance-intensive',
-    title: 'Winter Dance Intensive',
-    date: '2026-12-12',
-    startTime: '10:00 AM',
-    endTime: '4:00 PM',
-    venue: 'Studio Main Hall & Studio 2',
-    category: 'Workshop',
-    image: img('images/event-winter-intensive.jpg'),
-    excerpt: 'A full day of technique, conditioning and repertoire across styles.',
-    description: [
-      'One day, six sessions. Ballet barre with Meera, contemporary floorwork with Isha, hip hop foundations with Kavin, plus conditioning and a repertoire block building toward the anniversary gala.',
-      'Lunch and studio merch discounts included. Bring layers, water and a notebook.',
-    ],
-    agenda: [
-      { time: '10:00 AM', item: 'Ballet barre & centre' },
-      { time: '11:30 AM', item: 'Contemporary floorwork' },
-      { time: '1:00 PM', item: 'Lunch break' },
-      { time: '2:00 PM', item: 'Hip hop foundations' },
-      { time: '3:00 PM', item: 'Gala repertoire block' },
-      { time: '3:45 PM', item: 'Cool-down & notes' },
-    ],
-    admission: '₹1,800 full day · ₹1,000 single session',
-    registrationNote: 'Early enrollment required — places are limited to 30 dancers.',
-    performers: ['meera', 'isha', 'kavin'],
-    featured: false,
-  },
-  {
-    slug: 'studio-anniversary-gala',
-    title: 'Studio Anniversary Gala',
-    date: '2027-01-16',
-    startTime: '7:30 PM',
-    endTime: '11:00 PM',
-    venue: 'Hosur Cultural Hall',
-    category: 'Performance',
-    image: img('images/event-anniversary-gala.jpg'),
-    excerpt: 'Ten years of Rhythm — an evening of premieres, alumni and celebration.',
-    description: [
-      'The gala marks a decade of the studio with world-premiere pieces from current faculty, reunions with alumni now dancing professionally, and a closing number that involves every level in the building.',
-      'Formal dress encouraged. Proceeds support the scholarship fund.',
-    ],
-    agenda: [
-      { time: '7:00 PM', item: 'Red carpet & reception' },
-      { time: '7:30 PM', item: 'Premiere performances' },
-      { time: '9:00 PM', item: 'Alumni company set' },
-      { time: '9:45 PM', item: 'All-studio finale' },
-      { time: '10:15 PM', item: 'Afterparty in the lobby' },
-    ],
-    admission: '₹800 general · ₹500 balcony · scholarship fund raffle',
-    registrationNote: 'Priority booking for members until 1 December. Enquire for tickets.',
-    performers: ['aarohi', 'kavin', 'isha', 'rithik', 'diya', 'arjun', 'meera', 'sana'],
-    featured: false,
   },
 ];
 
-export const eventCategories: EventCategory[] = ['Performance', 'Workshop', 'Competition', 'Community'];
+export const eventCategories: EventCategory[] = ['Jam Session', 'Performance', 'Workshop', 'Community'];
 
 export function getEventBySlug(slug: string) {
   return events.find((e) => e.slug === slug);
-}
-
-export function eventMonthKey(iso: string) {
-  return iso.slice(0, 7);
 }
 
 export function formatEventDate(iso: string) {
@@ -200,14 +120,9 @@ export function formatEventDate(iso: string) {
   return d.toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
 }
 
-export function monthLabel(key: string) {
-  const [y, m] = key.split('-').map(Number);
-  return new Date(y, m - 1, 1).toLocaleDateString('en-GB', { month: 'long', year: 'numeric' });
-}
-
 export const categoryColors: Record<EventCategory, string> = {
-  Performance: '#e2564a',
-  Workshop: '#5b9fd4',
-  Competition: '#6cbf8a',
-  Community: '#e8b27d',
+  'Jam Session': '#c96f2e',
+  Performance: '#c9a24b',
+  Workshop: '#5c8fa8',
+  Community: '#b8956a',
 };

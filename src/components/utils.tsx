@@ -14,7 +14,7 @@ export function ScrollToTop() {
 export function usePageTitle(title: string) {
   const [ready, setReady] = useState(false);
   useEffect(() => {
-    document.title = title ? `${title} · Rhythm Dance Studio` : 'Rhythm Dance Studio';
+    document.title = title ? `${title} · Sanāda Space` : 'Sanāda Space — Imbued with Sound';
     setReady(true);
   }, [title]);
   return ready;

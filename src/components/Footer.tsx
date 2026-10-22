@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-import { studio } from '../data/studio';
-import { LogoMark } from './icons';
+import { brand, founders } from '../data/studio';
+import { InstagramIcon, LogoMark } from './icons';
 import './Footer.css';
 
 export function Footer() {
@@ -8,49 +8,52 @@ export function Footer() {
     <footer className="site-footer">
       <div className="container footer-grid">
         <div className="footer-brand">
-          <Link to="/" className="footer-logo" aria-label="Rhythm Dance Studio — home">
+          <Link to="/" className="footer-logo" aria-label="Sanāda Space — home">
             <LogoMark className="footer-mark" />
             <span>
-              <span className="footer-name">Rhythm</span>
-              <span className="footer-sub">Dance Studio</span>
+              <span className="footer-name">Sanāda</span>
+              <span className="footer-sub">Space</span>
             </span>
           </Link>
-          <p className="footer-tagline">{studio.tagline}</p>
-          <p className="footer-note">Sample studio details — replace with real information before launch.</p>
+          <p className="footer-tagline">Imbued with Sound</p>
+          <p className="footer-note">{brand.tagline}</p>
         </div>
 
         <nav className="footer-col" aria-label="Explore">
           <h3 className="footer-heading">Explore</h3>
-          <Link to="/classes">Classes</Link>
-          <Link to="/dancers">Dancers</Link>
           <Link to="/events">Events</Link>
           <Link to="/about">About</Link>
-        </nav>
-
-        <nav className="footer-col" aria-label="Visit">
-          <h3 className="footer-heading">Visit</h3>
-          <p>{studio.contact.address}</p>
-          <p>{studio.contact.city}</p>
-          <p>{studio.contact.phone}</p>
-          <a href={`mailto:${studio.contact.email}`}>{studio.contact.email}</a>
+          <Link to="/faq">FAQ</Link>
+          <Link to="/connect">Connect</Link>
         </nav>
 
         <div className="footer-col">
-          <h3 className="footer-heading">Studio Hours</h3>
-          {studio.contact.hours.map((h) => (
-            <p key={h.days} className="footer-hours">
-              <span>{h.days}</span>
-              <span>{h.time}</span>
-            </p>
+          <h3 className="footer-heading">Co-founders</h3>
+          {founders.map((f) => (
+            <a key={f.name} href={f.instagramUrl} target="_blank" rel="noopener noreferrer">
+              {f.name.split(' ')[0]} · {f.instagram}
+            </a>
           ))}
-          <Link to="/contact" className="footer-cta">
-            Enrolment enquiries →
+        </div>
+
+        <div className="footer-col">
+          <h3 className="footer-heading">Find us</h3>
+          <a
+            href={brand.instagramUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="footer-ig"
+          >
+            <InstagramIcon /> @sanadaspace
+          </a>
+          <Link to="/events/south-asian-jam" className="footer-cta">
+            Next: South Asian Jam →
           </Link>
         </div>
       </div>
       <div className="container footer-base">
-        <p>© {new Date().getFullYear()} Rhythm Dance Studio. Demonstration website.</p>
-        <p>Movement lives here.</p>
+        <p>© {new Date().getFullYear()} Sanāda Space. All rights reserved.</p>
+        <p>South Asian arts & fusion collabs · San Francisco</p>
       </div>
     </footer>
   );

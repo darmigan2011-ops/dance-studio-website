@@ -1,15 +1,15 @@
 import { useEffect, useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { ArrowRight, LogoMark } from './icons';
+import { brand } from '../data/studio';
 import './Header.css';
 
 const nav = [
   { to: '/', label: 'Home' },
-  { to: '/classes', label: 'Classes' },
-  { to: '/dancers', label: 'Dancers' },
   { to: '/events', label: 'Events' },
   { to: '/about', label: 'About' },
-  { to: '/contact', label: 'Contact' },
+  { to: '/faq', label: 'FAQ' },
+  { to: '/connect', label: 'Connect' },
 ];
 
 export function Header() {
@@ -36,11 +36,11 @@ export function Header() {
   return (
     <header className={`site-header ${scrolled ? 'is-scrolled' : ''}`}>
       <div className="container header-inner">
-        <Link to="/" className="brand" aria-label="Rhythm Dance Studio — home">
+        <Link to="/" className="brand" aria-label="Sanāda Space — home">
           <LogoMark className="brand-mark" />
           <span className="brand-text">
-            <span className="brand-name">Rhythm</span>
-            <span className="brand-sub">Dance Studio</span>
+            <span className="brand-name">Sanāda</span>
+            <span className="brand-sub">Space</span>
           </span>
         </Link>
 
@@ -58,8 +58,8 @@ export function Header() {
         </nav>
 
         <div className="header-actions">
-          <Link to="/contact" className="btn btn-dark btn-join">
-            Join Us <ArrowRight />
+          <Link to="/events/south-asian-jam" className="btn btn-dark btn-join">
+            South Asian Jam <ArrowRight />
           </Link>
           <button
             type="button"
@@ -88,9 +88,17 @@ export function Header() {
               {item.label}
             </NavLink>
           ))}
-          <Link to="/contact" className="btn btn-dark mobile-join">
-            Join Us <ArrowRight />
+          <Link to="/events/south-asian-jam" className="btn btn-dark mobile-join">
+            South Asian Jam <ArrowRight />
           </Link>
+          <a
+            href={brand.instagramUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mobile-instagram"
+          >
+            Instagram
+          </a>
         </nav>
       </div>
     </header>

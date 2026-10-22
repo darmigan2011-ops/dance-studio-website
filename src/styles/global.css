@@ -52,14 +52,14 @@ h4 {
 }
 
 :focus-visible {
-  outline: 2px solid var(--terracotta);
+  outline: 2px solid var(--accent);
   outline-offset: 3px;
   border-radius: 2px;
 }
 
 ::selection {
-  background: var(--terracotta);
-  color: var(--paper);
+  background: var(--gold);
+  color: var(--dark);
 }
 
 .container {
@@ -93,13 +93,14 @@ h4 {
 }
 
 .accent-text {
-  color: var(--terracotta);
+  color: var(--accent);
 }
 
 .script {
   font-family: var(--font-script);
   font-weight: 500;
-  color: var(--terracotta);
+  font-style: italic;
+  color: var(--gold);
   line-height: 1.15;
 }
 
@@ -158,8 +159,8 @@ h4 {
 }
 
 .btn-dark:hover {
-  background: var(--terracotta);
-  box-shadow: 0 12px 28px -14px rgba(176, 81, 42, 0.7);
+  background: var(--accent);
+  box-shadow: 0 12px 28px -14px rgba(201, 111, 46, 0.7);
 }
 
 .btn-light {
@@ -211,7 +212,7 @@ h4 {
 }
 
 .link-arrow:hover {
-  color: var(--terracotta);
+  color: var(--accent);
 }
 
 .link-arrow:hover svg {

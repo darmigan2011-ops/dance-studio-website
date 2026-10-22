@@ -1,87 +1,63 @@
 import { img } from '../lib/assets';
 
-export interface Instructor {
+export interface Founder {
   name: string;
   role: string;
   image: string;
   bio: string;
-  dancerSlug?: string;
+  funFact: string;
+  instagram: string;
+  instagramUrl: string;
 }
 
-export interface StudioValue {
-  title: string;
-  body: string;
-}
-
-export const studio = {
-  name: 'Rhythm Dance Studio',
-  tagline: 'Good dancers · Brighter people',
-  introEyebrow: 'Our Studio',
-  introTitle: 'More Than a Studio. A Community.',
+export const brand = {
+  name: 'Sanāda Space',
+  namePlain: 'Sanada Space',
+  meaning: 'Imbued with Sound',
+  tagline: 'South Asian arts & fusion collabs in San Francisco',
+  instagramUrl: 'https://www.instagram.com/sanadaspace/',
+  introEyebrow: 'Imbued with Sound',
+  introTitle: 'A space where sound, movement and collaboration meet.',
+  introLede:
+    'Sanāda Space is a new initiative promoting South Asian classical arts and fusion collaborations in San Francisco — periodic evenings with singers, dancers and musicians, often alongside South Asian vendors in the Bay Area.',
   story: [
-    'Rhythm began in a single borrowed hall with eleven dancers and one shared speaker. Ten years on, the studio occupies two floors, teaches eight styles, and still runs on the same belief: that movement makes people braver.',
-    'We are a performance studio first. Students don’t wait years for a stage — every term builds toward something shared, whether that’s a studio jam, a community showcase or a full theatrical production.',
-    'Beginners are not an afterthought here. Every advanced dancer in the building started in a beginner slot, and our faculty teach accordingly — patient foundations, honest feedback, and room to grow at your own pace.',
+    'Sanāda means “imbued with sound” or “resonant.” We built this space because we missed South Indian classical music and dance in San Francisco — and because we wanted room for fusion work that sits comfortably outside traditional schools without replacing them.',
+    'We are Priyadharshini and Anulekha — a Bharatanatyam dancer and a Kuchipudi dancer who met this need with a shared stage. Sanāda Space platforms different singers, dancers and instrumentalists, and partners primarily with South Asian vendors in SF.',
+    'Each gathering is an invitation to step away from the screen for an evening and be with live raga, rhythm and story.',
   ],
   values: [
     {
-      title: 'Move',
-      body: 'Technique in service of expression. We train bodies that are capable and confident.',
+      title: 'Resonance',
+      body: 'Classical forms deserve living rooms, not only archives. We create evenings where tradition can ring out afresh.',
     },
     {
-      title: 'Create',
-      body: 'Every student makes work. Improvisation, choreography and collaboration are part of the curriculum.',
+      title: 'Collaboration',
+      body: 'East and west, north and south — jugalbandis, fusion sets and shared stages where artists meet each other halfway.',
     },
     {
-      title: 'Belong',
-      body: 'A studio should feel like a room you’re glad to walk into. Ours does — at every age and level.',
+      title: 'Community',
+      body: 'A gathering place for diaspora audiences and artists who want South Asian arts to thrive here, on their own terms.',
     },
-  ] satisfies StudioValue[],
-  stats: [
-    { value: '8', label: 'Dance styles taught' },
-    { value: '12', label: 'Faculty members' },
-    { value: '40+', label: 'Classes every week' },
-    { value: '500+', label: 'Dancers in our community' },
   ],
-  instructors: [
-    {
-      name: 'Isha',
-      role: 'Contemporary & Jazz Faculty',
-      image: img('images/dancer-isha.jpg'),
-      bio: 'Twelve years of stage and teaching experience. Leads the annual ensemble piece and the contemporary track.',
-      dancerSlug: 'isha',
-    },
-    {
-      name: 'Kavin',
-      role: 'Hip Hop Instructor & Choreographer',
-      image: img('images/dancer-kavin.jpg'),
-      bio: 'Commercial choreographer for stage and screen. Runs the intermediate and advanced hip hop tracks.',
-      dancerSlug: 'kavin',
-    },
-    {
-      name: 'Meera',
-      role: 'Ballet Faculty',
-      image: img('images/dancer-meera.jpg'),
-      bio: 'Conservatory-trained, professionally performed, injury-aware. Builds the foundation every other style stands on.',
-      dancerSlug: 'meera',
-    },
-    {
-      name: 'Diya',
-      role: 'Bollywood Fusion Choreographer',
-      image: img('images/dancer-diya.jpg'),
-      bio: 'Narrative choreography across filmography and classical Indian lines. Directs festival sets and the Diwali showcase.',
-      dancerSlug: 'diya',
-    },
-  ] satisfies Instructor[],
-  contact: {
-    address: '14, 2nd Cross Street, Indira Nagar (sample address)',
-    city: 'Bengaluru 560038, India',
-    phone: '+91 98765 43210 (sample)',
-    email: 'hello@rhythmdance.example',
-    hours: [
-      { days: 'Monday – Friday', time: '4:00 PM – 10:00 PM' },
-      { days: 'Saturday', time: '9:00 AM – 8:00 PM' },
-      { days: 'Sunday', time: '9:00 AM – 6:00 PM' },
-    ],
-  },
 };
+
+export const founders: Founder[] = [
+  {
+    name: 'Priyadharshini Govindarajan',
+    role: 'Bharatanatyam dancer · Co-founder',
+    image: img('images/sanada/priya-portrait.jpg'),
+    bio: 'Priyadharshini Govindarajan is a Bharatanatyam dancer, choreographer, and educator based in San Francisco. Dancing since the age of four, she has performed on prominent stages across India and the Bay Area. Through her school, Maargam, and as co-founder of Sanāda Space, Priyadharshini is committed to championing Bharatanatyam in the diaspora while creating spaces for South Asian and Western art forms to meet, resonate, and create together. Her practice also explores longevity in Bharatanatyam, integrating strength training and Pilates to support a sustainable life in dance.',
+    funFact: 'I went skydiving with my mom for her 60th birthday!',
+    instagram: '@priyagovind.art',
+    instagramUrl: 'https://www.instagram.com/priyagovind.art/',
+  },
+  {
+    name: 'Anulekha Chillal',
+    role: 'Kuchipudi dancer · Co-founder',
+    image: img('images/sanada/anulekha-portrait.jpg'),
+    bio: 'Anulekha Chillal is a Kuchipudi dancer of 10+ years, trained in the Bay Area and Bangalore. Kuchipudi is a South Indian classical form that famously includes dancing on the plate. In addition to being certified as a semi-classical Bollywood instructor, she loves Latin and hip-hop music and dance. As co-founder of Sanāda Space, Anulekha is committed to bringing fusion collaborations between east and west to life, while honoring a space for traditional Indian arts to thrive on a new platform. She works in the audit and consulting industry and is passionate about bringing yoga to corporate workplaces as a certified yoga teacher.',
+    funFact: 'Has seen a kiwi bird (not the fruit) in New Zealand!',
+    instagram: '@thedevithedancer',
+    instagramUrl: 'https://www.instagram.com/thedevithedancer/',
+  },
+];

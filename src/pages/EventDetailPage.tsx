@@ -1,8 +1,8 @@
 import { Link, useParams } from 'react-router-dom';
 import { Reveal } from '../components/Reveal';
-import { ArrowRight, CalendarIcon, ClockIcon, PinIcon } from '../components/icons';
-import { categoryColors, formatEventDate, getEventBySlug } from '../data/events';
-import { getDancerBySlug } from '../data/dancers';
+import { ArrowRight, CalendarIcon, ClockIcon, InstagramIcon, PinIcon } from '../components/icons';
+import { formatEventDate, getEventBySlug } from '../data/events';
+import { brand } from '../data/studio';
 import { NotFoundPage } from './NotFoundPage';
 import { usePageTitle } from '../components/utils';
 import '../styles/pages.css';
@@ -13,10 +13,6 @@ export function EventDetailPage() {
   usePageTitle(event ? event.title : 'Event not found');
 
   if (!event) return <NotFoundPage />;
-
-  const performers = event.performers
-    .map((p) => getDancerBySlug(p))
-    .filter((d): d is NonNullable<typeof d> => Boolean(d));
 
   return (
     <>
@@ -29,12 +25,7 @@ export function EventDetailPage() {
             <ArrowRight /> All events
           </Link>
           <Reveal>
-            <span
-              className="event-card-cat"
-              style={{ color: categoryColors[event.category], borderColor: categoryColors[event.category] }}
-            >
-              {event.category}
-            </span>
+            <span className="event-card-cat event-card-cat--gold">{event.category}</span>
             <h1>{event.title}</h1>
             <div className="event-meta-row">
               <span>
@@ -44,7 +35,7 @@ export function EventDetailPage() {
                 <ClockIcon /> {event.startTime} – {event.endTime}
               </span>
               <span>
-                <PinIcon /> {event.venue}
+                <PinIcon /> {event.venue}, {event.address}, {event.city}
               </span>
             </div>
           </Reveal>
@@ -60,29 +51,36 @@ export function EventDetailPage() {
               ))}
             </Reveal>
 
-            <Reveal delay={100}>
-              <h2 style={{ marginTop: '2.8rem' }}>Running order</h2>
-              <ul className="agenda">
-                {event.agenda.map((item) => (
-                  <li key={item.time}>
-                    <time>{item.time}</time>
-                    <span>{item.item}</span>
-                  </li>
-                ))}
-              </ul>
-            </Reveal>
-
-            {performers.length > 0 && (
+            {event.performers.length > 0 && (
               <Reveal delay={140}>
-                <h2 style={{ marginTop: '2.8rem' }}>On stage</h2>
-                <div className="performers">
-                  {performers.map((d) => (
-                    <Link key={d.slug} to={`/dancers/${d.slug}`} className="performer-chip">
-                      <img src={d.image} alt="" loading="lazy" />
-                      {d.name}
-                    </Link>
+                <h2 style={{ marginTop: '2.8rem' }}>On the bill</h2>
+                <div className="lineup">
+                  {event.performers.map((p) => (
+                    <div key={p.name} className="lineup-item">
+                      <h3>{p.name}</h3>
+                      <p className="lineup-role">{p.role}</p>
+                      {p.bio && <p className="lineup-bio">{p.bio}</p>}
+                      {p.instagramUrl && (
+                        <a
+                          href={p.instagramUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="lineup-ig"
+                        >
+                          <InstagramIcon /> {p.instagram}
+                        </a>
+                      )}
+                    </div>
                   ))}
                 </div>
+              </Reveal>
+            )}
+
+            {event.venueNote && (
+              <Reveal delay={160}>
+                <p className="venue-note">
+                  <strong>Venue note:</strong> {event.venueNote}
+                </p>
               </Reveal>
             )}
           </div>
@@ -103,20 +101,49 @@ export function EventDetailPage() {
                 </div>
                 <div>
                   <dt>Venue</dt>
-                  <dd>{event.venue}</dd>
+                  <dd>
+                    {event.venue}
+                    <br />
+                    {event.address}
+                    <br />
+                    {event.city}
+                  </dd>
                 </div>
                 <div>
                   <dt>Admission</dt>
                   <dd>{event.admission}</dd>
                 </div>
               </dl>
-              <Link to={`/contact?event=${event.slug}`} className="btn btn-light">
-                Request tickets <ArrowRight />
-              </Link>
+              {event.registrationUrl ? (
+                <a
+                  href={event.registrationUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-dark"
+                >
+                  RSVP on Partiful <ArrowRight />
+                </a>
+              ) : (
+                <Link to="/connect" className="btn btn-dark">
+                  Connect <ArrowRight />
+                </Link>
+              )}
+              {event.paymentNote && <p className="event-disclaimer">{event.paymentNote}</p>}
+              {event.registrationNote && (
+                <p className="event-disclaimer">{event.registrationNote}</p>
+              )}
               <p className="event-disclaimer">
-                {event.registrationNote} Reservations are handled by our studio team directly — there is no
-                external ticketing provider on this demonstration site.
+                100% of funds support the performing artists and the nonprofit venue so more evenings like
+                this can happen in the future.
               </p>
+              <a
+                href={brand.instagramUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-outline event-ig-btn"
+              >
+                <InstagramIcon /> @sanadaspace
+              </a>
             </aside>
           </Reveal>
         </div>
